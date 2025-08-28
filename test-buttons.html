@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Botões - Senior Expert</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .hero__buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .btn--primary {
+            background: linear-gradient(135deg, #C0187A, #A01568);
+            color: white;
+            box-shadow: 0 4px 15px rgba(192, 24, 122, 0.3);
+        }
+        .btn--secondary {
+            background: transparent;
+            color: #C0187A;
+            border: 2px solid #C0187A;
+        }
+        .test-section {
+            min-height: 400px;
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px dashed #ccc;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #666;
+        }
+        .test-status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .success { background-color: #d4edda; color: #155724; }
+        .error { background-color: #f8d7da; color: #721c24; }
+        .info { background-color: #d1ecf1; color: #0c5460; }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🧪 Teste dos Botões Hero</h1>
+        
+        <div class="test-status success">
+            ✅ Teste iniciado com sucesso
+        </div>
+        
+        <h2>Teste 1: Botões do Hero</h2>
+        <div class="hero__buttons">
+            <a href="#contato" class="btn btn--primary">Quero Participar</a>
+            <a href="#programa" class="btn btn--secondary">Conheça o Programa</a>
+        </div>
+        
+        <div class="test-status info">
+            ℹ️ Clique nos botões acima para testar a navegação
+        </div>
+        
+        <h2>Teste 2: Seções de Destino</h2>
+        
+        <div id="contato" class="test-section">
+            🎯 Seção Contato
+        </div>
+        
+        <div id="programa" class="test-section">
+            🎯 Seção Programa
+        </div>
+        
+        <h2>Teste 3: Log de Navegação</h2>
+        <div id="navigation-log"></div>
+        
+        <script>
+            // Função de navegação suave
+            function smoothScrollTo(targetId) {
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    const targetPosition = targetElement.offsetTop - 100;
+                    
+                    if ('scrollBehavior' in document.documentElement.style) {
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    } else {
+                        window.scrollTo(0, targetPosition);
+                    }
+                    
+                    // Log da navegação
+                    logNavigation(targetId, targetPosition);
+                } else {
+                    logError(`Elemento com ID '${targetId}' não encontrado`);
+                }
+            }
+            
+            // Log de navegação
+            function logNavigation(targetId, position) {
+                const logDiv = document.getElementById('navigation-log');
+                const timestamp = new Date().toLocaleTimeString();
+                
+                logDiv.innerHTML += `
+                    <div class="test-status success">
+                        ✅ ${timestamp} - Navegando para: ${targetId} (posição: ${position}px)
+                    </div>
+                `;
+                
+                // Scroll para o log
+                logDiv.scrollIntoView({ behavior: 'smooth' });
+            }
+            
+            // Log de erro
+            function logError(message) {
+                const logDiv = document.getElementById('navigation-log');
+                const timestamp = new Date().toLocaleTimeString();
+                
+                logDiv.innerHTML += `
+                    <div class="test-status error">
+                        ❌ ${timestamp} - Erro: ${message}
+                    </div>
+                `;
+            }
+            
+            // Event listeners para os botões
+            document.addEventListener('DOMContentLoaded', function() {
+                const heroButtons = document.querySelectorAll('.hero__buttons .btn');
+                
+                heroButtons.forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        
+                        const href = button.getAttribute('href');
+                        if (href && href.startsWith('#')) {
+                            const targetId = href.substring(1);
+                            smoothScrollTo(targetId);
+                        }
+                    });
+                });
+                
+                // Log de inicialização
+                logNavigation('Inicialização', 'Botões configurados');
+            });
+        </script>
+    </div>
+</body>
+</html>
