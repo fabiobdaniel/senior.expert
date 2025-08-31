@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Local - Senior Expert</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS com caminho relativo -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    
+    <style>
+        .debug-info {
+            background: #f8f9fa;
+            border: 2px solid #C0187A;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        .debug-title {
+            color: #C0187A;
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 1rem;
+        }
+        
+        .debug-list {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #C0187A;
+        }
+        
+        .debug-item {
+            margin-bottom: 0.5rem;
+            padding: 0.5rem;
+            background: #f1f3f4;
+            border-radius: 4px;
+        }
+        
+        .debug-success {
+            color: #28a745;
+            font-weight: 600;
+        }
+        
+        .debug-error {
+            color: #dc3545;
+            font-weight: 600;
+        }
+        
+        .debug-warning {
+            color: #ffc107;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="debug-info">
+        <h1 class="debug-title">🔍 Debug Local - Senior Expert</h1>
+        
+        <div class="debug-list">
+            <h2>📁 Verificação de Arquivos:</h2>
+            
+            <div class="debug-item">
+                <strong>CSS Principal:</strong> 
+                <span id="css-status" class="debug-warning">Verificando...</span>
+            </div>
+            
+            <div class="debug-item">
+                <strong>JavaScript:</strong> 
+                <span id="js-status" class="debug-warning">Verificando...</span>
+            </div>
+            
+            <div class="debug-item">
+                <strong>Fontes Google:</strong> 
+                <span id="fonts-status" class="debug-warning">Verificando...</span>
+            </div>
+        </div>
+        
+        <div class="debug-list">
+            <h2>🎨 Teste de Estilos:</h2>
+            
+            <div class="debug-item">
+                <button class="btn btn--primary">Botão Primário</button>
+                <button class="btn btn--outline">Botão Outline</button>
+            </div>
+            
+            <div class="debug-item">
+                <h3 style="color: #C0187A;">Título Magenta</h3>
+                <p style="color: #666;">Texto cinza</p>
+            </div>
+        </div>
+        
+        <div class="debug-list">
+            <h2>📱 Teste de Responsividade:</h2>
+            <p>Redimensione a janela para testar o comportamento responsivo</p>
+            
+            <div class="debug-item">
+                <strong>Largura da tela:</strong> <span id="screen-width"></span>px
+            </div>
+            
+            <div class="debug-item">
+                <strong>Breakpoint:</strong> <span id="breakpoint"></span>
+            </div>
+        </div>
+        
+        <div class="debug-list">
+            <h2>🔗 Links de Teste:</h2>
+            <div class="debug-item">
+                <a href="index.html" class="btn btn--primary">Site Principal</a>
+                <a href="test-auth.html" class="btn btn--outline">Teste Auth</a>
+                <a href="test-header.html" class="btn btn--outline">Teste Header</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript de debug -->
+    <script>
+        // Verificar status dos arquivos
+        function checkFileStatus() {
+            // Verificar CSS
+            const cssLink = document.querySelector('link[href*="styles.css"]');
+            if (cssLink) {
+                const cssStatus = document.getElementById('css-status');
+                cssStatus.textContent = '✅ Carregado';
+                cssStatus.className = 'debug-success';
+            } else {
+                document.getElementById('css-status').textContent = '❌ Não encontrado';
+                document.getElementById('css-status').className = 'debug-error';
+            }
+            
+            // Verificar JavaScript
+            const jsScript = document.querySelector('script[src*="main.js"]');
+            if (jsScript) {
+                const jsStatus = document.getElementById('js-status');
+                jsStatus.textContent = '✅ Carregado';
+                jsStatus.className = 'debug-success';
+            } else {
+                document.getElementById('js-status').textContent = '❌ Não encontrado';
+                document.getElementById('js-status').className = 'debug-error';
+            }
+            
+            // Verificar fontes
+            const fontsLink = document.querySelector('link[href*="fonts.googleapis.com"]');
+            if (fontsLink) {
+                const fontsStatus = document.getElementById('fonts-status');
+                fontsStatus.textContent = '✅ Carregado';
+                fontsStatus.className = 'debug-success';
+            } else {
+                document.getElementById('fonts-status').textContent = '❌ Não encontrado';
+                document.getElementById('fonts-status').className = 'debug-error';
+            }
+        }
+        
+        // Verificar responsividade
+        function checkResponsiveness() {
+            const width = window.innerWidth;
+            const screenWidth = document.getElementById('screen-width');
+            const breakpoint = document.getElementById('breakpoint');
+            
+            screenWidth.textContent = width;
+            
+            if (width > 1024) {
+                breakpoint.textContent = 'Desktop (>1024px)';
+            } else if (width > 768) {
+                breakpoint.textContent = 'Tablet (768px-1024px)';
+            } else {
+                breakpoint.textContent = 'Mobile (≤768px)';
+            }
+        }
+        
+        // Executar verificações
+        window.addEventListener('load', function() {
+            checkFileStatus();
+            checkResponsiveness();
+        });
+        
+        window.addEventListener('resize', checkResponsiveness);
+        
+        // Log para console
+        console.log('🔍 Debug Local iniciado');
+        console.log('📁 Verificando arquivos CSS e JS...');
+    </script>
+</body>
+</html>
