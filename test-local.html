@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Local - Senior Expert</title>
+    
+    <!-- CSS Inline para teste -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background-color: #fff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .hero {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            text-align: center;
+        }
+        
+        .hero__title {
+            font-size: 3rem;
+            color: #222;
+            margin-bottom: 1rem;
+        }
+        
+        .hero__title-highlight {
+            color: #C0187A;
+        }
+        
+        .hero__subtitle {
+            font-size: 1.3rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            margin: 0 0.5rem;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn--primary {
+            background: linear-gradient(135deg, #C0187A, #A01568);
+            color: white;
+            box-shadow: 0 4px 15px rgba(192, 24, 122, 0.3);
+        }
+        
+        .btn--secondary {
+            background: transparent;
+            color: #C0187A;
+            border: 2px solid #C0187A;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+        
+        .test-status {
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        .success { background-color: #d4edda; color: #155724; }
+        .error { background-color: #f8d7da; color: #721c24; }
+        .info { background-color: #d1ecf1; color: #0c5460; }
+        
+        .hero__image {
+            margin: 2rem auto;
+            width: 400px;
+            height: 300px;
+            background: linear-gradient(135deg, #F5F5F5, #E9ECEF);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero__css-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #C0187A, #A01568);
+            border-radius: 50%;
+            position: relative;
+        }
+        
+        .hero__css-icon::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+        }
+        
+        .hero__css-icon::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            background: #C0187A;
+            border-radius: 50%;
+        }
+        
+        .hero__css-text {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #666;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1 class="hero__title">
+                Senior Expert — <span class="hero__title-highlight">Longevidade com Impacto</span>
+            </h1>
+            <p class="hero__subtitle">
+                Transformando experiência em inovação e resultados
+            </p>
+            
+            <div class="hero__buttons">
+                <a href="#contato" class="btn btn--primary">Quero Participar</a>
+                <a href="#programa" class="btn btn--secondary">Conheça o Programa</a>
+            </div>
+            
+            <div class="hero__image">
+                <div class="hero__css-icon"></div>
+                <p class="hero__css-text">Imagem Hero</p>
+            </div>
+        </div>
+        
+        <div class="test-status success">
+            ✅ Teste local funcionando - CSS inline carregado
+        </div>
+        
+        <div class="test-status info">
+            ℹ️ Se este teste funcionar, o problema está nos caminhos dos arquivos CSS/JS
+        </div>
+        
+        <h2>Teste de Navegação</h2>
+        <div id="contato" style="min-height: 300px; background: #f8f9fa; padding: 2rem; margin: 2rem 0; border-radius: 10px;">
+            <h3>🎯 Seção Contato</h3>
+            <p>Se você conseguiu chegar aqui clicando em "Quero Participar", a navegação está funcionando!</p>
+        </div>
+        
+        <div id="programa" style="min-height: 300px; background: #e9ecef; padding: 2rem; margin: 2rem 0; border-radius: 10px;">
+            <h3>🎯 Seção Programa</h3>
+            <p>Se você conseguiu chegar aqui clicando em "Conheça o Programa", a navegação está funcionando!</p>
+        </div>
+        
+        <div id="navigation-log"></div>
+    </div>
+    
+    <script>
+        // Função de navegação suave
+        function smoothScrollTo(targetId) {
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                targetElement.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                
+                logNavigation(targetId);
+            } else {
+                logError(`Elemento com ID '${targetId}' não encontrado`);
+            }
+        }
+        
+        // Log de navegação
+        function logNavigation(targetId) {
+            const logDiv = document.getElementById('navigation-log');
+            const timestamp = new Date().toLocaleTimeString();
+            
+            logDiv.innerHTML += `
+                <div class="test-status success">
+                    ✅ ${timestamp} - Navegando para: ${targetId}
+                </div>
+            `;
+        }
+        
+        // Log de erro
+        function logError(message) {
+            const logDiv = document.getElementById('navigation-log');
+            const timestamp = new Date().toLocaleTimeString();
+            
+            logDiv.innerHTML += `
+                <div class="test-status error">
+                    ❌ ${timestamp} - Erro: ${message}
+                </div>
+            `;
+        }
+        
+        // Event listeners para os botões
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroButtons = document.querySelectorAll('.hero__buttons .btn');
+            
+            heroButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    
+                    const href = button.getAttribute('href');
+                    if (href && href.startsWith('#')) {
+                        const targetId = href.substring(1);
+                        smoothScrollTo(targetId);
+                    }
+                });
+            });
+            
+            logNavigation('Inicialização', 'Botões configurados');
+        });
+    </script>
+</body>
+</html>
