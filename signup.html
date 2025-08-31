@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Crie sua conta Senior Expert - Junte-se à comunidade de talentos 50+.">
+    <meta name="author" content="Senior Expert">
+    
+    <title>Criar conta - Senior Expert</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/auth.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <!-- Header -->
+            <div class="auth-header">
+                <h1 class="auth-title">Criar conta</h1>
+                <p class="auth-subtitle">Junte-se à comunidade Senior Expert</p>
+            </div>
+            
+            <!-- Formulário de Cadastro -->
+            <form id="signupForm" class="auth-form">
+                <!-- Honeypot para anti-spam -->
+                <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off">
+                
+                <!-- Campo Nome -->
+                <div class="form-group">
+                    <label for="name" class="form-label">Nome completo</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        class="form-input" 
+                        required 
+                        autocomplete="name"
+                        placeholder="Seu nome completo"
+                    >
+                </div>
+                
+                <!-- Campo Email -->
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        class="form-input" 
+                        required 
+                        autocomplete="email"
+                        placeholder="seu@email.com"
+                    >
+                </div>
+                
+                <!-- Campo Senha -->
+                <div class="form-group">
+                    <label for="password" class="form-label">Senha</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        class="form-input" 
+                        required 
+                        minlength="6"
+                        autocomplete="new-password"
+                        placeholder="Mínimo 6 caracteres"
+                    >
+                </div>
+                
+                <!-- Campo Confirmar Senha -->
+                <div class="form-group">
+                    <label for="confirmPassword" class="form-label">Confirmar senha</label>
+                    <input 
+                        type="password" 
+                        id="confirmPassword" 
+                        name="confirmPassword" 
+                        class="form-input" 
+                        required 
+                        minlength="6"
+                        autocomplete="new-password"
+                        placeholder="Digite a senha novamente"
+                    >
+                </div>
+                
+                <!-- Checkbox LGPD/Termos -->
+                <div class="form-group">
+                    <div class="form-checkbox">
+                        <input 
+                            type="checkbox" 
+                            id="terms" 
+                            name="terms" 
+                            required
+                        >
+                        <label for="terms">
+                            Concordo com os <a href="#" class="auth-link">Termos de Uso</a> e 
+                            <a href="#" class="auth-link">Política de Privacidade</a>. 
+                            Autorizo o tratamento dos meus dados conforme a LGPD.
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Botão de Envio -->
+                <button type="submit" class="btn btn--primary">
+                    Cadastrar
+                </button>
+                
+                <!-- Links de Navegação -->
+                <div class="auth-links">
+                    <a href="login.html" class="auth-link">Já tenho conta</a>
+                </div>
+            </form>
+            
+            <!-- Link para voltar ao site principal -->
+            <div class="auth-links" style="margin-top: 2rem;">
+                <a href="index.html" class="auth-link">← Voltar ao site</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript -->
+    <script src="./assets/js/auth.js"></script>
+</body>
+</html>

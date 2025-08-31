@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Header - Senior Expert</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    
+    <style>
+        body {
+            padding-top: 100px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        .test-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .test-section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            background: white;
+        }
+        
+        .test-title {
+            color: #C0187A;
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 1rem;
+        }
+        
+        .test-info {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            border-left: 4px solid #C0187A;
+        }
+        
+        .header-preview {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .nav-preview {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .nav-logo a {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #C0187A;
+            text-decoration: none;
+        }
+        
+        .nav-menu {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-list {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            margin-right: 0.5rem;
+        }
+        
+        .nav-link {
+            color: #222;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .nav-link--cta {
+            background-color: #C0187A;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+        }
+        
+        .btn--outline {
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 0.75rem 1.5rem;
+            margin-left: 1.5rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            background: transparent;
+            color: #C0187A;
+            border: 2px solid #C0187A;
+        }
+        
+        .btn--outline:hover {
+            background-color: #C0187A;
+            color: white;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Preview -->
+    <div class="header-preview">
+        <div class="nav-preview">
+            <div class="nav-logo">
+                <a href="#hero">Senior Expert</a>
+            </div>
+            
+            <div class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#programa" class="nav-link">Programa</a></li>
+                    <li><a href="#comunidade" class="nav-link">Comunidade</a></li>
+                    <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
+                    <li><a href="#parceiros" class="nav-link">Parceiros</a></li>
+                    <li><a href="#conteudos" class="nav-link">Conteúdos</a></li>
+                    <li><a href="#contato" class="nav-link nav-link--cta">Contato</a></li>
+                </ul>
+                
+                <!-- Botão Sou Expert -->
+                <a href="login.html" class="btn btn--outline">Sou Expert</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="test-content">
+        <h1 class="test-title">🧪 Teste do Header e Botão "Sou Expert"</h1>
+        
+        <div class="test-section">
+            <h2 class="test-title">✅ Ajustes Realizados</h2>
+            <div class="test-info">
+                <ul>
+                    <li><strong>Tamanho da fonte:</strong> Ajustado para 0.9rem (mesmo do "Contato")</li>
+                    <li><strong>Espaçamento:</strong> Adicionado margin-left: 1.5rem para separar do "Contato"</li>
+                    <li><strong>Padding:</strong> Ajustado para 0.75rem 1.5rem (mesmo do "Contato")</li>
+                    <li><strong>Responsivo:</strong> No mobile, o botão fica em largura total e centralizado</li>
+                    <li><strong>Hover:</strong> Efeito de elevação e mudança de cor</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2 class="test-title">🔧 Como Testar</h2>
+            <div class="test-info">
+                <ol>
+                    <li><strong>Desktop:</strong> O botão deve ter o mesmo tamanho do "Contato" e estar bem espaçado</li>
+                    <li><strong>Hover:</strong> Passe o mouse sobre o botão para ver o efeito</li>
+                    <li><strong>Mobile:</strong> Redimensione a janela para ver o comportamento responsivo</li>
+                    <li><strong>Navegação:</strong> Clique no botão para ir para login.html</li>
+                </ol>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2 class="test-title">📱 Teste Responsivo</h2>
+            <div class="test-info">
+                <p><strong>Desktop (>768px):</strong> Botão inline com margin-left: 1.5rem</p>
+                <p><strong>Mobile (≤768px):</strong> Botão em largura total, centralizado, com margin-top: 1rem</p>
+                <p><strong>Transições:</strong> Hover suave com transform: translateY(-2px)</p>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2 class="test-title">🎨 Estilos Aplicados</h2>
+            <div class="test-info">
+                <pre><code>.nav__menu .btn--outline {
+    font-size: 0.9rem;          /* Mesmo tamanho do Contato */
+    font-weight: 500;            /* Peso da fonte */
+    padding: 0.75rem 1.5rem;    /* Mesmo padding do Contato */
+    margin-left: 1.5rem;        /* Espaçamento do Contato */
+    border-radius: 50px;        /* Bordas arredondadas */
+    transition: all 0.3s ease;  /* Transição suave */
+}</code></pre>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

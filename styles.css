@@ -118,6 +118,7 @@ p {
     display: flex;
     list-style: none;
     gap: 2rem;
+    margin-right: 0.5rem;
 }
 
 .nav__link {
@@ -142,6 +143,34 @@ p {
 
 .nav__link--cta:hover {
     background-color: #A01568;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Botões de Autenticação no header */
+.nav__auth-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-left: 1.5rem;
+}
+
+.nav__menu .btn--outline {
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    background: transparent;
+    color: #C0187A;
+    border: 2px solid #C0187A;
+    white-space: nowrap;
+}
+
+.nav__menu .btn--outline:hover {
+    background-color: #C0187A;
     color: white;
     transform: translateY(-2px);
 }
@@ -326,6 +355,18 @@ p {
 }
 
 .btn--secondary:hover {
+    background-color: #C0187A;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.btn--outline {
+    background: transparent;
+    color: #C0187A;
+    border: 2px solid #C0187A;
+}
+
+.btn--outline:hover {
     background-color: #C0187A;
     color: white;
     transform: translateY(-3px);
@@ -930,6 +971,18 @@ p {
         flex-direction: column;
         gap: 1.5rem;
         margin-bottom: 2rem;
+    }
+    
+    /* Botões de Autenticação no mobile */
+    .nav__auth-buttons {
+        margin-left: 0;
+        margin-top: 1rem;
+        width: 100%;
+    }
+    
+    .nav__menu .btn--outline {
+        width: 100%;
+        text-align: center;
     }
     
     .nav__toggle,

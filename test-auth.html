@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Auth Completo - Senior Expert</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/auth.css">
+    
+    <style>
+        .test-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        .test-section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            background: white;
+        }
+        
+        .test-title {
+            color: #C0187A;
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 1rem;
+        }
+        
+        .test-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .test-link {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: #C0187A;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .test-link:hover {
+            background: #a31160;
+            transform: translateY(-2px);
+        }
+        
+        .test-info {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            border-left: 4px solid #C0187A;
+        }
+        
+        .user-type {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .user-type h3 {
+            color: #856404;
+            margin-bottom: 0.5rem;
+        }
+        
+        .user-type ul {
+            margin: 0;
+            padding-left: 1.5rem;
+        }
+        
+        .user-type li {
+            color: #856404;
+            margin-bottom: 0.25rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1 class="test-title">🧪 Teste Completo do Sistema de Autenticação</h1>
+        
+        <div class="test-section">
+            <h2 class="test-title">📱 Páginas Criadas</h2>
+            
+            <div class="user-type">
+                <h3>👨‍💼 Sou Expert (50+)</h3>
+                <ul>
+                    <li><a href="login.html" class="test-link">Login</a> | <a href="signup.html" class="test-link">Criar Conta</a> | <a href="forgot.html" class="test-link">Recuperar Senha</a></li>
+                </ul>
+            </div>
+            
+            <div class="user-type">
+                <h3>🚀 Sou Jovem HW (Hungry & Willing)</h3>
+                <ul>
+                    <li><a href="login-jovem.html" class="test-link">Login</a> | <a href="signup-jovem.html" class="test-link">Criar Conta</a> | <a href="forgot-jovem.html" class="test-link">Recuperar Senha</a></li>
+                </ul>
+            </div>
+            
+            <div class="user-type">
+                <h3>🏢 Sou Empresa</h3>
+                <ul>
+                    <li><a href="login-empresa.html" class="test-link">Login</a> | <a href="signup-empresa.html" class="test-link">Criar Conta</a> | <a href="forgot-empresa.html" class="test-link">Recuperar Senha</a></li>
+                </ul>
+            </div>
+            
+            <div class="test-links" style="margin-top: 2rem;">
+                <a href="index.html" class="test-link">Site Principal</a>
+                <a href="test-header.html" class="test-link">Teste Header</a>
+            </div>
+            
+            <div class="test-info">
+                <strong>✅ Funcionalidades implementadas:</strong>
+                <ul>
+                    <li><strong>3 tipos de usuário:</strong> Expert, Jovem HW, Empresa</li>
+                    <li><strong>Botões no header:</strong> Organizados verticalmente com espaçamento adequado</li>
+                    <li><strong>Formulários específicos:</strong> Campos adaptados para cada tipo de usuário</li>
+                    <li><strong>Validação completa:</strong> Todos os formulários com validação em tempo real</li>
+                    <li><strong>Honeypot anti-spam:</strong> Proteção contra bots em todos os formulários</li>
+                    <li><strong>Design responsivo:</strong> Adaptação para desktop e mobile</li>
+                    <li><strong>Navegação integrada:</strong> Links entre todas as páginas de cada tipo</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2 class="test-title">🔧 Como Testar</h2>
+            <div class="test-info">
+                <ol>
+                    <li><strong>Header:</strong> Verifique os 3 botões organizados verticalmente</li>
+                    <li><strong>Navegação:</strong> Teste cada botão → deve ir para a página correta</li>
+                    <li><strong>Formulários:</strong> Teste validação, honeypot e simulação de envio</li>
+                    <li><strong>Responsivo:</strong> Redimensione a janela para ver comportamento mobile</li>
+                    <li><strong>Links internos:</strong> Navegue entre login/signup/forgot de cada tipo</li>
+                </ol>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2 class="test-title">👥 Tipos de Usuário</h2>
+            
+            <div class="user-type">
+                <h3>👨‍💼 Sou Expert (50+)</h3>
+                <ul>
+                    <li><strong>Campos:</strong> Nome, Email, Senha, Confirmar Senha, LGPD</li>
+                    <li><strong>Foco:</strong> Experiência e conhecimento para compartilhar</li>
+                    <li><strong>Cor:</strong> Magenta (#C0187A) - cor principal do Senior Expert</li>
+                </ul>
+            </div>
+            
+            <div class="user-type">
+                <h3>🚀 Sou Jovem HW (Hungry & Willing)</h3>
+                <ul>
+                    <li><strong>Campos:</strong> Nome, Email, Telefone, Área de Interesse, Senhas, LGPD</li>
+                    <li><strong>Foco:</strong> Energia e disposição para aprender e crescer</li>
+                    <li><strong>Cor:</strong> Dourado (#C9A227) - representando energia e potencial</li>
+                </ul>
+            </div>
+            
+            <div class="user-type">
+                <h3>🏢 Sou Empresa</h3>
+                <ul>
+                    <li><strong>Campos:</strong> Nome da Empresa, CNPJ, Responsável, Cargo, Email, Telefone, Setor, Tamanho, Senhas, LGPD</li>
+                    <li><strong>Foco:</strong> Conectar com talentos para oportunidades de negócio</li>
+                    <li><strong>Cor:</strong> Dourado (#C9A227) - representando parcerias e crescimento</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2 class="test-title">📁 Arquivos Criados/Modificados</h2>
+            <div class="test-info">
+                <ul>
+                    <li><code>index.html</code> - Adicionados 3 botões de autenticação</li>
+                    <li><code>assets/css/styles.css</code> - Estilos para botões organizados verticalmente</li>
+                    <li><code>login.html</code> - Login para Experts (já existia)</li>
+                    <li><code>signup.html</code> - Cadastro para Experts (já existia)</li>
+                    <li><code>forgot.html</code> - Recuperação para Experts (já existia)</li>
+                    <li><code>login-jovem.html</code> - Login para Jovens HW (novo)</li>
+                    <li><code>signup-jovem.html</code> - Cadastro para Jovens HW (novo)</li>
+                    <li><code>forgot-jovem.html</code> - Recuperação para Jovens HW (novo)</li>
+                    <li><code>login-empresa.html</code> - Login para Empresas (novo)</li>
+                    <li><code>signup-empresa.html</code> - Cadastro para Empresas (novo)</li>
+                    <li><code>forgot-empresa.html</code> - Recuperação para Empresas (novo)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2 class="test-title">🚀 Próximos Passos</h2>
+            <div class="test-info">
+                <ul>
+                    <li><strong>Backend:</strong> Integrar com API real para cada tipo de usuário</li>
+                    <li><strong>Dashboard:</strong> Criar áreas específicas para cada tipo de usuário</li>
+                    <li><strong>Matching:</strong> Sistema de conexão entre Experts, Jovens e Empresas</li>
+                    <li><strong>Email:</strong> Implementar confirmação e recuperação real</li>
+                    <li><strong>Segurança:</strong> Adicionar autenticação JWT ou session-based</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+Esta pasta é destinada para imagens do projeto Senior Expert.
+
+Para produção, substitua os placeholders SVG por imagens reais:
+
+1. hero-image.jpg - Imagem principal da seção hero
+2. logo.png - Logo da empresa
+3. depoimentos/ - Fotos dos depoimentos
+4. parceiros/ - Logos dos parceiros
+5. conteudos/ - Imagens dos artigos do blog
+
+Formato recomendado:
+- JPG para fotografias
+- PNG para logos e imagens com transparência
+- WebP para melhor performance (com fallback)
+- SVG para ícones e gráficos vetoriais
+
+Tamanhos recomendados:
+- Hero: 800x600px ou 1200x800px
+- Cards: 400x300px
+- Avatares: 200x200px
+- Logos: 300x150px
+
+
+

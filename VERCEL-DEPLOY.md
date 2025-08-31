@@ -72,3 +72,5 @@ senior-expert/
 ---
 
 **💡 Dica: Quanto menos configuração, melhor! O Vercel é inteligente!**
+
+

@@ -146,3 +146,5 @@ senior-expert/
 **🎉 Agora o visual deve funcionar perfeitamente!**
 
 Teste primeiro o `test-local.html` para confirmar que tudo está funcionando, depois use o `index.html` corrigido.
+
+
